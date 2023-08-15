@@ -69,4 +69,4 @@ app.get('/user/:_id',async(req,res)=>{
         res.status(500).json({ error: 'Server error' });       }
     })
 
-app.listen(3100);
+app.listen(3000);
