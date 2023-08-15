@@ -1,6 +1,26 @@
 # REST-API-User
-Code.
+/////////////////Config Code With mongoosedb
+const mongoose=require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/webProject').then((req,res)=>{
 
+console.log("conected..");
+}).catch((e)=>{
+
+    console.log(e);
+})
+///////////////////////////User Entitiy Code.
+const mongoose=require('mongoose');
+const mongo=mongoose.Schema({
+
+    name:String,
+    caste:String,
+    address:String
+
+});
+module.exports=mongoose.model('Employee',mongo);
+
+
+//////////////////////////API Code.
 const express = require('express');
 require('./config');
 const user = require('./User');
